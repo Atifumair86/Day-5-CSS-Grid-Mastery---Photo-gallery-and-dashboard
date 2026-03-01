@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!--sidebar-->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>📊 dashboard</h2>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">
+                    <span>🏠</span>Dashboard
+                </a>
+                 <a href="#" class="nav-link active">
+                    <span>📈</span> Analytics
+                </a>
+                 <a href="#" class="nav-link active">
+                    <span>👥</span>Users
+                </a>
+                 <a href="#" class="nav-link active">
+                    <span>💰</span>Revenue
+                </a>
+                <a href="#" class="nav-link active">
+                    <span>⚙️</span>Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!--Main content-->
+        <main class="main-content">
+            <!--header-->
+            <header class="header">
+                <h1>Welcome back user!</h1>
+                <div class="user-info">
+                    <span>👤 Profile</span>
+                </div>
+            </header>
+
+            <!--stats card-->
+        <section class="stats-grid">
+            <div class="stat-card">
+                    <div class="stat-icon" style="background: #3498db;">📊</div>
+                    <div class="stat-details">
+                        <p class="stat-title">Total Users</p>
+                        <h3 class="stat-value">12,456</h3>
+                        <span class="stat-change positive">+12% from last month</span>
+                    </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #2ecc71;">💰</div>
+                <div class="stat-details">
+                    <p class="stat-title">Revenue</p>
+                    <h3 class="stat-value">$45,648</h3>
+                    <span class="stat-change positive">+8% from last month</span>
+                </div>
+            </div>        
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #cc362e;">🛒</div>
+                <div class="stat-details">
+                    <p class="stat-title">Orders</p>
+                    <h3 class="stat-value">3,456</h3>
+                    <span class="stat-change negative"> -3% from last month</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #9b59b6;">⭐</div>
+                <div class="stat-details">
+                    <p class="stat-title">Avg-rating</p>
+                    <h3 class="stat-value">4.8/5</h3>
+                    <span class="stat-change positive"> +0.2 from last month</span>
+                     </div>
+                  </div>
+                </div>
+        </section>
+
+     <!--chart and recent activity-->
+     <section class="content-grid">
+        <div class="chart-widget">
+            <h3>sales-overview</h3>
+            <div class="chart-placeholder">
+                        <p>📈 Sales chart</p>
+                        <p style="font-size: 14px; opacity: 0.7;">
+                             <canvas id="myChart" width="400" height="200"></canvas>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        </p>
+                    </div>
+        </div>
+
+        <div class="recent-widget">
+            <h3>Recent activity</h3>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <span class="activity-dot" style="background: #3498db;"></span>
+                   <div>
+                     <p><strong>New user registered</strong></p>
+                     <span class="time">2 mins ago</span>
+                   </div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-dot" style="background: #2ecc31;"></span>
+                    <div>
+                        <p><strong>order #4127 completed</strong></p>
+                        <span class="time">15 mins ago</span>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                            <span class="activity-dot" style="background: #2ecc71;"></span>
+                            <div>
+                                <p><strong>Order #1234 completed</strong></p>
+                                <span class="time">15 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-dot" style="background: #f39c12;"></span>
+                            <div>
+                                <p><strong>Payment received</strong></p>
+                                <span class="time">1 hour ago</span>
+                            </div>
+                        </div>
+                    <div class="activity-item">
+                            <span class="activity-dot" style="background: #e74c3c;"></span>
+                            <div>
+                                <p><strong>Server warning</strong></p>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+     </section>
+
+     <!--tasks and calendar-->
+     <section class="bottom-grid">
+        <div class="task-widget">
+            <h3>Tasks</h3>
+            <div class="tasks-list">
+                <label class="task-item">
+                    <input type="checkbox">
+                    <span>Review Q4 analytics report</span>
+                </label>
+
+                 <label class="task-item">
+                    <input type="checkbox">
+                    <span>update product descriptions</span>
+                </label>
+
+                 <label class="task-item">
+                    <input type="checkbox">
+                    <span>schedule team meeting</span>
+                </label>
+
+                 <label class="task-item">
+                    <input type="checkbox">
+                    <span>Respond to customer Emails</span>
+                </label>
+            </div>
+        </div>
+
+        <!--Tasks and calendar-->
+
+        <div class="calendar-widget">
+            <h3>Upcoming Events</h3>
+            <div class="event-list">
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">1</span>
+                        <span class="month">March</span>
+                    </div>
+                    <div class="event-details">
+                        <p><strong>product launch</strong></p>
+                        <span>10:00am - 12:00pm</span>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">8</span>
+                        <span class="month">march</span>
+                    </div>
+                    <div class="event-details">
+                        <p><strong>Team meeting</strong></p>
+                        <span>2:00pm - 3:30pm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+        </main>
+    </div>
+
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Your JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
